@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
 const initialLoginState = {
   isLoading: false,
@@ -27,5 +28,7 @@ const loginSlice = createSlice({
 });
 
 export const { loginPending, loginSuccess, loginFail } = loginSlice.actions;
+
+export const selectLoginState = (state: RootState) => state.login;
 
 export default loginSlice.reducer;
