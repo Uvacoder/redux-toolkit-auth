@@ -11,7 +11,6 @@ import {
 import { LoginForm } from "../types";
 import { userLogin } from "../Api/AuthApi";
 import { loginSchema } from "../utils/validationSchema";
-import { log } from "util";
 
 const Login: React.FC = () => {
   const { register, handleSubmit, errors } = useForm<LoginForm>({
